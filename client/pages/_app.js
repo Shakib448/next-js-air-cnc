@@ -1,5 +1,9 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { useEffect } from "react";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Theme from "../src/Theme/Theme";
+import GlobalStyle from "../src/Theme/GlobalStyle";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -8,7 +12,13 @@ function MyApp({ Component, pageProps }) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={Theme}>
+      <CssBaseline />
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
