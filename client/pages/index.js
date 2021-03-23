@@ -1,10 +1,32 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import Layout from "../src/Components/Layout";
+import clsx from "clsx";
 
-export default function Home() {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: theme.spacing(4),
+    padding: theme.spacing(4),
+    height: "100vh",
+  },
+}));
+
+const Home = () => {
+  const classes = useStyles();
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>You did it muktadir</h1>
-    </main>
+    <Layout title="Welcome to Home">
+      <Container>
+        <Grid
+          item
+          container
+          justify="center"
+          alignItems="center"
+          className={clsx(classes.root)}
+        >
+          <Typography variant="h2">AIR CNC</Typography>
+        </Grid>
+      </Container>
+    </Layout>
   );
-}
+};
+
+export default Home;
