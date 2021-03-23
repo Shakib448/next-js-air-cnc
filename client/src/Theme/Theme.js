@@ -1,4 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
+import "typeface-cormorant";
 
 // colors
 const primary = "#8EC5FC";
@@ -119,6 +120,16 @@ const theme = createMuiTheme({
         [`@media (max-width:  ${sm}px)`]: {
           paddingLeft: spacing,
           paddingRight: spacing,
+        },
+      },
+    },
+    typography: {
+      fontFamily: ["Poppins, sans-serif"].join(","),
+    },
+    overrides: {
+      MuiCssBaseline: {
+        "@global": {
+          "@font-face": ["Poppins, sans-serif"],
         },
       },
     },

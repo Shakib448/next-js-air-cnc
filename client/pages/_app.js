@@ -1,8 +1,8 @@
 import "../styles/globals.scss";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Theme from "../src/Theme/Theme";
+import theme from "../src/Theme/Theme";
 import GlobalStyle from "../src/Theme/GlobalStyle";
 
 function MyApp({ Component, pageProps }) {
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <GlobalStyle />
       <Component {...pageProps} />
