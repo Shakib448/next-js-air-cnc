@@ -9,6 +9,11 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={Theme.palette.primary.main} />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

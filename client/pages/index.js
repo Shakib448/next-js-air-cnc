@@ -4,7 +4,6 @@ import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(4),
     padding: theme.spacing(4),
     height: "100vh",
   },

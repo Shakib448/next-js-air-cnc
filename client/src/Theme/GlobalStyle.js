@@ -5,11 +5,10 @@ const styles = (theme) => ({
     "*:focus": {
       outline: 0,
     },
-    "h1,h2,h3,h4,h5,h6": {
-      fontFamily: "Poppins, sans-serif;",
-      fontWeight: "bold",
-    },
 
+    ".MuiTypography-root": {
+      fontFamily: "Poppins, sans-serif !important",
+    },
     ".container": {
       width: "100%",
       paddingRight: theme.spacing(4),
