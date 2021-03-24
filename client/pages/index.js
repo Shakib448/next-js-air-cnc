@@ -9,6 +9,7 @@ import {
 import Layout from "../src/Components/Layout";
 import clsx from "clsx";
 import ReactTypingEffect from "react-typing-effect";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,9 +77,11 @@ const Home = () => {
               );
             }}
           />
-          <Button variant="contained" className={clsx(classes.btn)}>
-            <Typography variant="h6">Welcome</Typography>
-          </Button>
+          <Link href="/home">
+            <Button variant="contained" className={clsx(classes.btn)}>
+              <Typography variant="h6">Welcome</Typography>
+            </Button>
+          </Link>
         </Grid>
       </Container>
     </Layout>
