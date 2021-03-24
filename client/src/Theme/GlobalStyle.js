@@ -5,13 +5,14 @@ const styles = (theme) => ({
     "*:focus": {
       outline: 0,
     },
-
     ".MuiTypography-root": {
       fontFamily: "Poppins, sans-serif !important",
+      textTransform: "none !important",
     },
     ".MuiButtonBase-root": {
       fontFamily: "Poppins, sans-serif !important",
       fontWeight: "bold ",
+      textTransform: "none !important",
     },
     ".container": {
       width: "100%",

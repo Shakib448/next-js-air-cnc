@@ -10,6 +10,7 @@ import Layout from "../../src/Components/Layout";
 import Link from "next/link";
 import clsx from "clsx";
 import Navigation from "../../src/Components/Navigation";
+import MobileNavigation from "../../src/Components/MobileNavigation";
 
 const useStyles = makeStyles((theme) => ({
   root: {
