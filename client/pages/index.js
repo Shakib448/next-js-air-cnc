@@ -20,12 +20,13 @@ const useStyles = makeStyles((theme) => ({
     color: "#2DDE8D",
   },
   main: {
-    background: "#f8f8ff",
+    background: "#fefefa",
   },
   btn: {
     padding: `${theme.spacing(1)}px ${theme.spacing(4)}px`,
     background: "linear-gradient(90deg, #2BDE8C, #78EF4E)",
     textTransform: "none",
+    color: "#fff",
   },
 }));
 
@@ -79,7 +80,9 @@ const Home = () => {
           />
           <Link href="/home">
             <Button variant="contained" className={clsx(classes.btn)}>
-              <Typography variant="h6">Welcome</Typography>
+              <Typography variant="h6">
+                <Box fontWeight="fontWeightBold">Welcome</Box>
+              </Typography>
             </Button>
           </Link>
         </Grid>
