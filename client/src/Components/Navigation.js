@@ -28,6 +28,17 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: "#2DDE8D",
   },
+  linkButtonHover: {
+    transition: "all .5s",
+    "&:hover": {
+      background: "#2DDE8D",
+      color: "#fff",
+    },
+  },
+  signUpBtn: {
+    background: "linear-gradient(90deg, #2BDE8C, #78EF4E)",
+    color: "#fff",
+  },
 }));
 
 const Navigation = () => {
@@ -42,19 +53,27 @@ const Navigation = () => {
           </Typography>
           <ButtonGroup color="inherit" className={clsx(classes.linkButton)}>
             <Box mr={2}>
-              <Button>Host your Home</Button>
+              <Button className={clsx(classes.linkButtonHover)}>
+                Host your Home
+              </Button>
             </Box>
             <Box mr={2}>
-              <Button>Host your experience</Button>
+              <Button className={clsx(classes.linkButtonHover)}>
+                Host your experience
+              </Button>
             </Box>
             <Box mr={2}>
-              <Button>Help</Button>
+              <Button className={clsx(classes.linkButtonHover)}>Help</Button>
             </Box>
             <Box mr={2}>
-              <Button>Log in</Button>
+              <Button className={clsx(classes.linkButtonHover)}>Log in</Button>
             </Box>
             <Box mr={2}>
-              <Button color="inherit" variant="contained">
+              <Button
+                className={clsx(classes.signUpBtn)}
+                color="inherit"
+                variant="contained"
+              >
                 Sign up
               </Button>
             </Box>
