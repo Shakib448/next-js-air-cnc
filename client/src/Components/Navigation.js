@@ -7,18 +7,14 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Box, ButtonGroup } from "@material-ui/core";
 import clsx from "clsx";
+import { useState } from "react";
+import MobileNavigation from "./MobileNavigation";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    display: "block",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
+
   linkButton: {
     [theme.breakpoints.down("sm")]: {
       display: "none",
@@ -43,6 +39,19 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
   const classes = useStyles();
+  const [state, setState] = useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setState({ ...state, [anchor]: open });
+  };
 
   return (
     <Box component="div" className={clsx(classes.root)}>
@@ -78,15 +87,7 @@ const Navigation = () => {
               </Button>
             </Box>
           </ButtonGroup>
-
-          <IconButton
-            edge="end"
-            className={clsx(classes.menuButton)}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+          <MobileNavigation />
         </Toolbar>
       </AppBar>
     </Box>
