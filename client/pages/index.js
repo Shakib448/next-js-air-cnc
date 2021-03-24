@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   return (
-    <Layout title="Welcome to Home">
+    <Layout title="Welcome">
       <Container maxWidth={false} className={clsx(classes.main)}>
         <Grid
           item
