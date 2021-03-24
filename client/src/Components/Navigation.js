@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Box } from "@material-ui/core";
+import { Box, ButtonGroup } from "@material-ui/core";
 import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,12 +14,20 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    display: "block",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  },
+  linkButton: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   title: {
     flexGrow: 1,
     color: "#2DDE8D",
   },
-  fonts: {},
 }));
 
 const Navigation = () => {
@@ -32,7 +40,26 @@ const Navigation = () => {
           <Typography variant="h5" className={clsx(classes.title)}>
             <Box fontWeight="fontWeightBold">AIR CNC</Box>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <ButtonGroup color="inherit" className={clsx(classes.linkButton)}>
+            <Box mr={2}>
+              <Button>Host your Home</Button>
+            </Box>
+            <Box mr={2}>
+              <Button>Host your experience</Button>
+            </Box>
+            <Box mr={2}>
+              <Button>Help</Button>
+            </Box>
+            <Box mr={2}>
+              <Button>Log in</Button>
+            </Box>
+            <Box mr={2}>
+              <Button color="inherit" variant="contained">
+                Sign up
+              </Button>
+            </Box>
+          </ButtonGroup>
+
           <IconButton
             edge="end"
             className={clsx(classes.menuButton)}

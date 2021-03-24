@@ -9,6 +9,10 @@ const styles = (theme) => ({
     ".MuiTypography-root": {
       fontFamily: "Poppins, sans-serif !important",
     },
+    ".MuiButtonBase-root": {
+      fontFamily: "Poppins, sans-serif !important",
+      fontWeight: "bold ",
+    },
     ".container": {
       width: "100%",
       paddingRight: theme.spacing(4),
