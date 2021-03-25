@@ -16,12 +16,24 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     boxShadow: "5px 5px 20px lightgray",
   },
+  formArea: {
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
 }));
 
 const HomeForm = () => {
   const classes = useStyles();
   return (
-    <Grid item container md={4} lg={4} sm={12}>
+    <Grid
+      item
+      container
+      md={12}
+      lg={4}
+      sm={12}
+      className={clsx(classes.formArea)}
+    >
       <Paper className={clsx(classes.paper)}>
         <h1>Hello World</h1>
       </Paper>
