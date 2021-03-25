@@ -52,10 +52,6 @@ const styles = (theme) => ({
     ".capitalize": {
       textTransform: "capitalize",
     },
-
-    ".MuiInput-input": {
-      paddingLeft: "10px !important",
-    },
     ".MuiPickersModal-dialog": {
       "&:first-child": {
         padding: "10px !important",
@@ -73,6 +69,14 @@ const styles = (theme) => ({
     },
     "span.MuiTypography-root.MuiPickersCalendarHeader-dayLabel.MuiTypography-caption": {
       fontSize: "1rem",
+      fontWeight: "bold",
+    },
+    ".MuiInputBase-root.MuiInput-root.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd ": {
+      fontSize: "large",
+      fontWeight: "bold",
+    },
+    "label#date-picker-dialog-label": {
+      fontSize: "large",
       fontWeight: "bold",
     },
   },

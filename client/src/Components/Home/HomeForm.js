@@ -61,7 +61,7 @@ const HomeForm = () => {
             disableToolbar
             margin="normal"
             id="date-picker-dialog"
-            label="Date picker dialog"
+            label="Arival"
             format="dd/MM/yyyy"
             value={selectedDate}
             onChange={handleDateChange}
@@ -80,7 +80,7 @@ const HomeForm = () => {
             disableToolbar
             margin="normal"
             id="date-picker-dialog"
-            label="Date picker dialog"
+            label="Depature"
             format="dd/MM/yyyy"
             value={selectedDate}
             onChange={handleDateChange}
