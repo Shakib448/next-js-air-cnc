@@ -30,17 +30,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// var today = new Date();
-// var tomorrow = new Date();
-// tomorrow.setDate(today.getDate()+3);
-
-// console.log(tomorrow)
-
 const HomeForm = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [arivalDate, setArivalDate] = useState(new Date());
+  const [depatureDate, setDepatureData] = useState(new Date());
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const depature = depatureDate.setDate(arivalDate.getDate() + 3);
+
+  const handleArivalDateChange = (date) => {
+    setArivalDate(date);
+  };
+  const handleDepatureDateChange = (date) => {
+    setDepatureData(date);
   };
   const classes = useStyles();
   return (
@@ -63,8 +63,8 @@ const HomeForm = () => {
             id="date-picker-dialog"
             label="Arival"
             format="dd/MM/yyyy"
-            value={selectedDate}
-            onChange={handleDateChange}
+            value={arivalDate}
+            onChange={handleArivalDateChange}
             KeyboardButtonProps={{
               "aria-label": "change date",
             }}
@@ -82,8 +82,8 @@ const HomeForm = () => {
             id="date-picker-dialog"
             label="Depature"
             format="dd/MM/yyyy"
-            value={selectedDate}
-            onChange={handleDateChange}
+            value={depature}
+            onChange={handleDepatureDateChange}
             KeyboardButtonProps={{
               "aria-label": "change date",
             }}
