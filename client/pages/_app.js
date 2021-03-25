@@ -22,6 +22,8 @@ const appVariants = {
   pageExit: { y: "-100vh", transition: { ease: "easeInOut", duration: 1 } },
 };
 
+NProgress.configure({ showSpinner: false });
+
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
