@@ -56,6 +56,25 @@ const styles = (theme) => ({
     ".MuiInput-input": {
       paddingLeft: "10px !important",
     },
+    ".MuiPickersModal-dialog": {
+      "&:first-child": {
+        padding: "10px !important",
+      },
+    },
+    ".MuiDialog-paperWidthSm": {
+      maxWidth: "30% !important",
+    },
+    ".MuiPickersBasePicker-pickerView": {
+      maxWidth: "none !important",
+    },
+    "p.MuiTypography-root.MuiTypography-body1.MuiTypography-alignCenter": {
+      fontSize: "1.2rem",
+      fontWeight: "bold",
+    },
+    "span.MuiTypography-root.MuiPickersCalendarHeader-dayLabel.MuiTypography-caption": {
+      fontSize: "1rem",
+      fontWeight: "bold",
+    },
   },
 });
 

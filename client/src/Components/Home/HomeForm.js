@@ -1,5 +1,12 @@
 import { Grid, makeStyles, Paper } from "@material-ui/core";
 import clsx from "clsx";
+import "date-fns";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from "@material-ui/pickers";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -30,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
 // console.log(tomorrow)
 
 const HomeForm = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
   const classes = useStyles();
   return (
     <Grid
@@ -44,10 +56,42 @@ const HomeForm = () => {
         <h1>Hello World</h1>
       </Paper>
       <Paper className={clsx(classes.datePickerArea)}>
-        <h1>Hello World</h1>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <KeyboardDatePicker
+            disableToolbar
+            margin="normal"
+            id="date-picker-dialog"
+            label="Date picker dialog"
+            format="dd/MM/yyyy"
+            value={selectedDate}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+              "aria-label": "change date",
+            }}
+            InputProps={{
+              disableUnderline: true,
+            }}
+          />
+        </MuiPickersUtilsProvider>
       </Paper>
       <Paper className={clsx(classes.datePickerArea)}>
-        <h1>Hello World</h1>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <KeyboardDatePicker
+            disableToolbar
+            margin="normal"
+            id="date-picker-dialog"
+            label="Date picker dialog"
+            format="dd/MM/yyyy"
+            value={selectedDate}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+              "aria-label": "change date",
+            }}
+            InputProps={{
+              disableUnderline: true,
+            }}
+          />
+        </MuiPickersUtilsProvider>
       </Paper>
     </Grid>
   );
