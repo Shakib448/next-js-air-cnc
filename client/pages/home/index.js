@@ -1,5 +1,5 @@
 import {
-  Button,
+  Box,
   Container,
   Grid,
   makeStyles,
@@ -7,14 +7,17 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import Layout from "../../src/Components/Layout/Layout";
-import Link from "next/link";
 import clsx from "clsx";
 import Navigation from "../../src/Components/Navigation/Navigation";
+import HomeForm from "../../src/Components/Home/HomeForm";
+import HomeContent from "../../src/Components/Home/HomeContent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(4),
     height: "100vh",
+  },
+  gird: {
+    margin: `${theme.spacing(2)}px 0px`,
   },
 }));
 
@@ -24,12 +27,15 @@ const Home = () => {
     <>
       <Navigation />
       <Layout title="Welcome to AIR-CNC">
-        <Container className={clsx(classes.root)}>
-          <Grid item>
-            <Typography variant="h1">Welcome to the home</Typography>
-            <Link href="/">
-              <Button>Back</Button>
-            </Link>
+        <Container maxWidth="lg" className={clsx(classes.root)}>
+          <Box mt={10} mb={5}>
+            <Typography variant="h5">
+              <Box fontWeight="fontWeightBold">Where do you want to go</Box>
+            </Typography>
+          </Box>
+          <Grid item container direction="row" className={clsx(classes.gird)}>
+            <HomeForm />
+            <HomeContent />
           </Grid>
         </Container>
       </Layout>
