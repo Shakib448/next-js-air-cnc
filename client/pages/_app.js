@@ -7,7 +7,6 @@ import GlobalStyle from "../src/Theme/GlobalStyle";
 import { motion, AnimatePresence } from "framer-motion";
 import Router from "next/router";
 import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 
 const appVariants = {
   pageInitial: {
