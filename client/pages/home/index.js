@@ -14,7 +14,6 @@ import HomeContent from "../../src/Components/Home/HomeContent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(4),
     height: "100vh",
   },
   gird: {
@@ -29,9 +28,11 @@ const Home = () => {
       <Navigation />
       <Layout title="Welcome to AIR-CNC">
         <Container maxWidth="lg" className={clsx(classes.root)}>
-          <Typography variant="h5">
-            <Box fontWeight="fontWeightBold">Where do you want to go</Box>
-          </Typography>
+          <Box mt={10} mb={5}>
+            <Typography variant="h5">
+              <Box fontWeight="fontWeightBold">Where do you want to go</Box>
+            </Typography>
+          </Box>
           <Grid item container direction="row" className={clsx(classes.gird)}>
             <HomeForm />
             <HomeContent />
