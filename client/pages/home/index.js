@@ -25,8 +25,8 @@ const Home = () => {
     <>
       <Navigation />
       <Layout title="Welcome to AIR-CNC">
-        <Container>
-          <Grid className={clsx(classes.root)}>
+        <Container className={clsx(classes.root)}>
+          <Grid item>
             <Typography variant="h1">Welcome to the home</Typography>
             <Link href="/">
               <Button>Back</Button>
