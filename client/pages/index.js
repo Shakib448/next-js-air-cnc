@@ -6,7 +6,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import Layout from "../src/Components/Layout";
+import Layout from "../src/Components/Layout/Layout";
 import clsx from "clsx";
 import ReactTypingEffect from "react-typing-effect";
 import Link from "next/link";

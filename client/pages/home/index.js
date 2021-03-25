@@ -6,11 +6,10 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import Layout from "../../src/Components/Layout";
+import Layout from "../../src/Components/Layout/Layout";
 import Link from "next/link";
 import clsx from "clsx";
-import Navigation from "../../src/Components/Navigation";
-import MobileNavigation from "../../src/Components/MobileNavigation";
+import Navigation from "../../src/Components/Navigation/Navigation";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,8 +24,8 @@ const Home = () => {
     <>
       <Navigation />
       <Layout title="Welcome to AIR-CNC">
-        <Container>
-          <Grid className={clsx(classes.root)}>
+        <Container className={clsx(classes.root)}>
+          <Grid item>
             <Typography variant="h1">Welcome to the home</Typography>
             <Link href="/">
               <Button>Back</Button>
