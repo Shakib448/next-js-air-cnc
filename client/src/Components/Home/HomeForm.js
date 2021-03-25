@@ -5,16 +5,16 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
     width: "95%",
-    margin: `${theme.spacing(2)}px 0px`,
+    margin: `${theme.spacing(1)}px 0px`,
     borderRadius: "10px",
     boxShadow: "5px 5px 20px lightgray",
   },
   datePickerArea: {
     width: "47%",
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
-    margin: `${theme.spacing(2)}px ${theme.spacing(1)}px 0px 0px`,
+    margin: `${theme.spacing(1)}px ${theme.spacing(1)}px 0px 0px`,
     borderRadius: "10px",
-    boxShadow: "5px 5px 20px lightgray",
+    boxShadow: "10px 10px 20px lightgray",
   },
   formArea: {
     [theme.breakpoints.down("md")]: {
@@ -22,6 +22,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+// var today = new Date();
+// var tomorrow = new Date();
+// tomorrow.setDate(today.getDate()+3);
+
+// console.log(tomorrow)
 
 const HomeForm = () => {
   const classes = useStyles();

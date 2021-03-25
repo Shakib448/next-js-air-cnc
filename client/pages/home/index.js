@@ -19,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
   gird: {
     margin: `${theme.spacing(2)}px 0px`,
   },
+  typo: {
+    [theme.breakpoints.down("md")]: {
+      display: "flex",
+      justifyContent: "center",
+    },
+  },
 }));
 
 const Home = () => {
@@ -28,8 +34,8 @@ const Home = () => {
       <Navigation />
       <Layout title="Welcome to AIR-CNC">
         <Container maxWidth="lg" className={clsx(classes.root)}>
-          <Box mt={10} mb={5}>
-            <Typography variant="h5">
+          <Box mt={10} mb={3}>
+            <Typography variant="h5" className={clsx(classes.typo)}>
               <Box fontWeight="fontWeightBold">Where do you want to go</Box>
             </Typography>
           </Box>
