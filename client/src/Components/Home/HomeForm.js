@@ -1,4 +1,14 @@
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import {
+  Grid,
+  makeStyles,
+  Paper,
+  TextField,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  Button,
+} from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
 import DateFnsUtils from "@date-io/date-fns";
@@ -7,6 +17,8 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import { useState } from "react";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -17,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "5px 5px 20px lightgray",
   },
   datePickerArea: {
-    width: "47%",
+    width: "46.5%",
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
-    margin: `${theme.spacing(1)}px ${theme.spacing(1)}px 0px 0px`,
+    margin: `0px ${theme.spacing(1)}px 0px 0px`,
     borderRadius: "10px",
     boxShadow: "10px 10px 20px lightgray",
   },
@@ -27,6 +39,35 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
     },
+  },
+  form: {
+    width: "100%",
+    margin: `${theme.spacing(1)}px 0px`,
+  },
+  accordion: {
+    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
+    width: "95%",
+    margin: `${theme.spacing(1)}px 0px`,
+    borderRadius: "10px",
+    boxShadow: "5px 5px 20px lightgray",
+    border: "none",
+  },
+  btn: {
+    padding: `${theme.spacing(2)}px ${theme.spacing(2)}px`,
+    width: "95%",
+    margin: `${theme.spacing(1)}px 0px`,
+    background: "linear-gradient(90deg, #2BDE8C, #78EF4E)",
+    color: "#fff",
+    borderRadius: "10px",
+    boxShadow: "5px 5px 20px lightgray",
+    fontSize: "18px",
+  },
+  applyBtn: {
+    padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
+    margin: `${theme.spacing(2)}px 0px`,
+    color: theme.palette.primary.main,
+    borderColor: theme.palette.primary.main,
+    borderRadius: "10px",
   },
 }));
 
@@ -53,7 +94,12 @@ const HomeForm = () => {
       className={clsx(classes.formArea)}
     >
       <Paper className={clsx(classes.paper)}>
-        <h1>Hello World</h1>
+        <TextField
+          className={clsx(classes.form)}
+          id="outlined-basic"
+          label="Add city, Location or Landmark"
+          variant="outlined"
+        />
       </Paper>
       <Paper className={clsx(classes.datePickerArea)}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -93,6 +139,39 @@ const HomeForm = () => {
           />
         </MuiPickersUtilsProvider>
       </Paper>
+      <Accordion square className={clsx(classes.accordion)}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>
+            Guest
+            {/* <br /> shakib */}
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Grid item container direction="column">
+            <hr />
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+            <Grid item container justify="flex-end">
+              <Button variant="outlined" className={clsx(classes.applyBtn)}>
+                Apply
+              </Button>
+            </Grid>
+          </Grid>
+        </AccordionDetails>
+      </Accordion>
+      <Button
+        startIcon={<SearchIcon style={{ fontSize: 30 }} />}
+        className={clsx(classes.btn)}
+      >
+        Search
+      </Button>
     </Grid>
   );
 };
