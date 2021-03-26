@@ -158,13 +158,11 @@ const HomeForm = () => {
         <AccordionDetails>
           <Grid item container direction="column">
             <Box mt={2} mb={2}>
-              <Box mb={2}>
-                <Quantity count={count} setCount={setCount} title="ADULTS" />
-              </Box>
-              <Box mb={2}>
-                <Quantity count={count} setCount={setCount} title="CHILD" />
-              </Box>
-              <Quantity count={count} setCount={setCount} title="BABIES" />
+              {["ADULTS", "CHILD", "BABIES"].map((item, index) => (
+                <Box mb={2} key={index}>
+                  <Quantity count={count} setCount={setCount} title={item} />
+                </Box>
+              ))}
             </Box>
             <Grid item container justify="flex-end">
               <Button variant="outlined" className={clsx(classes.applyBtn)}>
