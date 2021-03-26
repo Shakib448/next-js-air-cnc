@@ -7,6 +7,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  Button,
 } from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
@@ -17,6 +18,7 @@ import {
 } from "@material-ui/pickers";
 import { useState } from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -49,6 +51,22 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
     boxShadow: "5px 5px 20px lightgray",
     border: "none",
+  },
+  btn: {
+    padding: `${theme.spacing(2)}px ${theme.spacing(2)}px`,
+    width: "95%",
+    margin: `${theme.spacing(1)}px 0px`,
+    background: "linear-gradient(90deg, #2BDE8C, #78EF4E)",
+    color: "#fff",
+    borderRadius: "10px",
+    boxShadow: "5px 5px 20px lightgray",
+    fontSize: "18px",
+  },
+  applyBtn: {
+    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
+    margin: `${theme.spacing(2)}px 0px`,
+    color: theme.palette.primary.main,
+    borderColor: theme.palette.primary.main,
   },
 }));
 
@@ -139,9 +157,20 @@ const HomeForm = () => {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <Grid item container justify="flex-end">
+              <Button variant="outlined" className={clsx(classes.applyBtn)}>
+                Apply
+              </Button>
+            </Grid>
           </Grid>
         </AccordionDetails>
       </Accordion>
+      <Button
+        startIcon={<SearchIcon style={{ fontSize: 30 }} />}
+        className={clsx(classes.btn)}
+      >
+        Search
+      </Button>
     </Grid>
   );
 };
