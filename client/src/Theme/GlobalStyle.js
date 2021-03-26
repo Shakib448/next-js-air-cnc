@@ -85,13 +85,26 @@ const styles = (theme) => ({
       fontWeight: "bold",
     },
     ".MuiAccordion-root:before": {
-      background: "transparent",
+      opacity: 0,
       height: "2px",
       position: "absolute",
       top: "70px",
     },
     ".MuiAccordion-root.Mui-expanded:before": {
       background: "lightgray",
+      opacity: 1,
+    },
+    ".MuiAccordionSummary-content.Mui-expanded": {
+      margin: "0px !important",
+    },
+    ".MuiAccordionSummary-content": {
+      margin: "0px !important",
+    },
+    ".MuiAccordionDetails-root": {
+      margin: "0px !important",
+    },
+    ".MuiAccordionSummary-root": {
+      padding: "5px 0px !important",
     },
   },
 });
