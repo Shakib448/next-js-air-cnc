@@ -9,6 +9,7 @@ import {
   Typography,
   Button,
   Box,
+  IconButton,
 } from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
@@ -20,6 +21,8 @@ import {
 import { useState } from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import SearchIcon from "@material-ui/icons/Search";
+
+import Quantity from "../Common/Quantity";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -65,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   applyBtn: {
     padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
-    margin: `${theme.spacing(1)}px 0px`,
+    margin: `0px 0px ${theme.spacing(2)}px 0px`,
     color: theme.palette.primary.main,
     borderColor: theme.palette.primary.main,
     borderRadius: "10px",
@@ -75,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
 const HomeForm = () => {
   const [arivalDate, setArivalDate] = useState(new Date());
   const [depatureDate, setDepatureData] = useState(new Date());
+  const [count, setCount] = useState(0);
 
   const depature = depatureDate.setDate(arivalDate.getDate() + 3);
 
@@ -154,10 +158,13 @@ const HomeForm = () => {
         <AccordionDetails>
           <Grid item container direction="column">
             <Box mt={2} mb={2}>
-              <Grid item container direction="row" justify="space-between">
-                <Grid item> shakib</Grid>
-                <Grid item> rotom</Grid>
-              </Grid>
+              <Box mb={2}>
+                <Quantity count={count} setCount={setCount} title="ADULTS" />
+              </Box>
+              <Box mb={2}>
+                <Quantity count={count} setCount={setCount} title="CHILD" />
+              </Box>
+              <Quantity count={count} setCount={setCount} title="BABIES" />
             </Box>
             <Grid item container justify="flex-end">
               <Button variant="outlined" className={clsx(classes.applyBtn)}>
