@@ -54,7 +54,7 @@ const styles = (theme) => ({
     },
     ".MuiPickersModal-dialog": {
       "&:first-child": {
-        padding: "10px !important",
+        padding: "0px !important",
       },
     },
     ".MuiDialog-paperWidthSm": {
