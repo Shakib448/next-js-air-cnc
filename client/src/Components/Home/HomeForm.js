@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "5px 5px 20px lightgray",
   },
   datePickerArea: {
-    width: "47%",
+    width: "46.5%",
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
-    margin: `${theme.spacing(1)}px ${theme.spacing(1)}px 0px 0px`,
+    margin: `0px ${theme.spacing(1)}px 0px 0px`,
     borderRadius: "10px",
     boxShadow: "10px 10px 20px lightgray",
   },
@@ -101,6 +101,14 @@ const HomeForm = () => {
             }}
           />
         </MuiPickersUtilsProvider>
+      </Paper>
+      <Paper className={clsx(classes.paper)}>
+        <TextField
+          className={clsx(classes.form)}
+          id="outlined-basic"
+          label="Add city, Location or Landmark"
+          variant="outlined"
+        />
       </Paper>
     </Grid>
   );
