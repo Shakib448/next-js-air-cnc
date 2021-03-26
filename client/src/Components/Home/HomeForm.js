@@ -120,7 +120,6 @@ const HomeForm = () => {
           />
         </MuiPickersUtilsProvider>
       </Paper>
-      {/* <Paper className={clsx(classes.paper)}> */}
       <Accordion square className={clsx(classes.accordion)}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -136,7 +135,6 @@ const HomeForm = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      {/* </Paper> */}
     </Grid>
   );
 };
