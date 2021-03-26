@@ -86,6 +86,12 @@ const styles = (theme) => ({
     },
     ".MuiAccordion-root:before": {
       background: "transparent",
+      height: "2px",
+      position: "absolute",
+      top: "70px",
+    },
+    ".MuiAccordion-root.Mui-expanded:before": {
+      background: "lightgray",
     },
   },
 });
