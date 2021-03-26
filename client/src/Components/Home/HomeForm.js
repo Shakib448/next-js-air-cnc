@@ -63,10 +63,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
   },
   applyBtn: {
-    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
+    padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
     margin: `${theme.spacing(2)}px 0px`,
     color: theme.palette.primary.main,
     borderColor: theme.palette.primary.main,
+    borderRadius: "10px",
   },
 }));
 
