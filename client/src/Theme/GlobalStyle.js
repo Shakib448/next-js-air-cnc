@@ -79,6 +79,11 @@ const styles = (theme) => ({
       fontSize: "large",
       fontWeight: "bold",
     },
+    ".MuiInputLabel-outlined": {
+      fontFamily: "Poppins, sans-serif !important",
+      fontSize: "14.5px",
+      fontWeight: "bold",
+    },
   },
 });
 

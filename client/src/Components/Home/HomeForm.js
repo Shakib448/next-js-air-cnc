@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles, Paper, TextField } from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
 import DateFnsUtils from "@date-io/date-fns";
@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
     },
   },
+  form: {
+    width: "100%",
+    margin: `${theme.spacing(1)}px 0px`,
+  },
 }));
 
 const HomeForm = () => {
@@ -53,7 +57,12 @@ const HomeForm = () => {
       className={clsx(classes.formArea)}
     >
       <Paper className={clsx(classes.paper)}>
-        <h1>Hello World</h1>
+        <TextField
+          className={clsx(classes.form)}
+          id="outlined-basic"
+          label="Add city, Location or Landmark"
+          variant="outlined"
+        />
       </Paper>
       <Paper className={clsx(classes.datePickerArea)}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
