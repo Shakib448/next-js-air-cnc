@@ -1,4 +1,13 @@
-import { Grid, makeStyles, Paper, TextField } from "@material-ui/core";
+import {
+  Grid,
+  makeStyles,
+  Paper,
+  TextField,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
 import DateFnsUtils from "@date-io/date-fns";
@@ -7,6 +16,7 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import { useState } from "react";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -31,6 +41,14 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: "100%",
     margin: `${theme.spacing(1)}px 0px`,
+  },
+  accordion: {
+    padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
+    width: "95%",
+    margin: `${theme.spacing(1)}px 0px`,
+    borderRadius: "10px",
+    boxShadow: "5px 5px 20px lightgray",
+    border: "none",
   },
 }));
 
@@ -102,14 +120,23 @@ const HomeForm = () => {
           />
         </MuiPickersUtilsProvider>
       </Paper>
-      <Paper className={clsx(classes.paper)}>
-        <TextField
-          className={clsx(classes.form)}
-          id="outlined-basic"
-          label="Add city, Location or Landmark"
-          variant="outlined"
-        />
-      </Paper>
+      {/* <Paper className={clsx(classes.paper)}> */}
+      <Accordion square className={clsx(classes.accordion)}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Accordion 1</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      {/* </Paper> */}
     </Grid>
   );
 };

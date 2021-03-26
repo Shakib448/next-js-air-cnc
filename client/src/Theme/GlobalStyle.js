@@ -84,6 +84,9 @@ const styles = (theme) => ({
       fontSize: "14.5px",
       fontWeight: "bold",
     },
+    ".MuiAccordion-root:before": {
+      background: "transparent",
+    },
   },
 });
 
