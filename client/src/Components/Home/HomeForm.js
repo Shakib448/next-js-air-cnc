@@ -8,6 +8,7 @@ import {
   AccordionDetails,
   Typography,
   Button,
+  Box,
 } from "@material-ui/core";
 import clsx from "clsx";
 import "date-fns";
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   applyBtn: {
     padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
-    margin: `${theme.spacing(2)}px 0px`,
+    margin: `${theme.spacing(1)}px 0px`,
     color: theme.palette.primary.main,
     borderColor: theme.palette.primary.main,
     borderRadius: "10px",
@@ -152,12 +153,12 @@ const HomeForm = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Grid item container direction="column">
-            <hr />
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Box mt={2} mb={2}>
+              <Grid item container direction="row" justify="space-between">
+                <Grid item> shakib</Grid>
+                <Grid item> rotom</Grid>
+              </Grid>
+            </Box>
             <Grid item container justify="flex-end">
               <Button variant="outlined" className={clsx(classes.applyBtn)}>
                 Apply

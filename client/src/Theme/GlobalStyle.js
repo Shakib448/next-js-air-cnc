@@ -101,7 +101,7 @@ const styles = (theme) => ({
       margin: "0px !important",
     },
     ".MuiAccordionDetails-root": {
-      margin: "0px !important",
+      padding: "0px !important",
     },
     ".MuiAccordionSummary-root": {
       padding: "5px 0px !important",
