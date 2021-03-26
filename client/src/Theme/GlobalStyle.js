@@ -81,8 +81,8 @@ const styles = (theme) => ({
     },
     ".MuiInputLabel-outlined": {
       fontFamily: "Poppins, sans-serif !important",
-      fontSize: "14.5px",
-      fontWeight: "bold",
+      fontSize: "14.5px !important",
+      fontWeight: "bold !important",
     },
     ".MuiAccordion-root:before": {
       height: "2px !important",
