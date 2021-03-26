@@ -85,14 +85,14 @@ const styles = (theme) => ({
       fontWeight: "bold",
     },
     ".MuiAccordion-root:before": {
-      height: "2px",
-      position: "absolute",
-      top: "70px",
-      opacity: "0",
+      height: "2px !important",
+      position: "absolute !important",
+      top: "70px !important",
+      opacity: "0 !important",
     },
     ".MuiAccordion-root.Mui-expanded:before": {
-      background: "lightgray ",
-      opacity: "1",
+      background: "lightgray !important",
+      opacity: "1 !important",
     },
     ".MuiAccordionSummary-content.Mui-expanded": {
       margin: "0px !important",
